@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center my-3"> Add Student </h1>
+     <div class="container">
+       <div class="row">
+         <div class="col-md-6 offset-md-3">
+           <div class="card bg-info">
+             <div class="card-body">
+               <form action="" method="POST">
+                 {% csrf_token %}
+                 <div class="md-3">
+                   <label for="rn">rn</label>
+                 <input name="rn" type="text" id="rn" class="form-control" placeholder="Enter your std_rn" required>
+                 </div>
+                   <div class="md-3">
+                   <label for="name">name</label>
+                 <input name="name" type="text" id="name" class="form-control" placeholder="Enter your std_name" required>
+                 </div>
+
+
+                 <br>
+
+                 <div class="container text-center">
+                   <button class="btn btn-primary">
+                     Add Student
+                   </button>
+                 </div>
+
+               </form>
+
+             </div>
+
+           </div>
+
+         </div>
+
+       </div>
+
+     </div>
+
+
+
+{% endblock content %}

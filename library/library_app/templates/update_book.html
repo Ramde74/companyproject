@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1 class="text-center my-3"> Update Book </h1>
+     <div class="container">
+       <div class="row">
+         <div class="col-md-6 offset-md-3">
+           <div class="card bg-info">
+             <div class="card-body">
+               <form action="do-update-book/{{book.id}}" method="POST">
+                 {% csrf_token %}
+                 <div class="md-3">
+                   <label for="title">title</label>
+                 <input name="title" type="text" id="title" class="form-control" placeholder="Enter  title" required value="{{book.title}}">
+                 </div>
+                   <div class="md-3">
+                   <label for="author">author</label>
+                 <input name="author" type="text" id="author" class="form-control" placeholder="Enter author" required value="{{book.author}}">
+                 </div>
+
+
+                 <br>
+
+                 <div class="container text-center">
+                   <button class="btn btn-success">
+                     Update Book
+                   </button>
+                 </div>
+
+               </form>
+
+             </div>
+
+           </div>
+
+         </div>
+
+       </div>
+
+     </div>
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1 class="text-center my-3"> Update Student </h1>
+     <div class="container">
+       <div class="row">
+         <div class="col-md-6 offset-md-3">
+           <div class="card bg-info">
+             <div class="card-body">
+               <form action="do-update-std/{{std.id}}" method="POST">
+                 {% csrf_token %}
+                 <div class="md-3">
+                   <label for="rn">rn</label>
+                 <input name="rn" type="text" id="rn" class="form-control" placeholder="Enter your Roll" required value="{{std.rn}}">
+                 </div>
+                   <div class="md-3">
+                   <label for="name">name</label>
+                 <input name="name" type="text" id="name" class="form-control" placeholder="Enter your name" required value="{{std.name}}">
+                 </div>
+
+
+                 <br>
+
+                 <div class="container text-center">
+                   <button class="btn btn-success">
+                     Update Student
+                   </button>
+                 </div>
+
+               </form>
+
+             </div>
+
+           </div>
+
+         </div>
+
+       </div>
+
+     </div>
+{% endblock content %}

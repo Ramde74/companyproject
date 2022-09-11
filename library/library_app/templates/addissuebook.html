@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center my-3"> Add Issue Book </h1>
+     <div class="container">
+       <div class="row">
+         <div class="col-md-6 offset-md-3">
+           <div class="card bg-info">
+             <div class="card-body">
+               <form action="" method="POST">
+                 {% csrf_token %}
+                 <div class="md-3">
+                   <label for="stu_name">stu_name</label>
+                 <input name="stu_name" type="text" id="stu_name" class="form-control" placeholder="Enter stu_name " required>
+                 </div>
+                   <div class="md-3">
+                   <label for="book_name">book_name</label>
+                 <input name="book_name" type="text" id="book_name" class="form-control" placeholder="Enter book_name" required>
+                 </div>
+                 <div class="md-3">
+                   <label for="issue_date">issue_date</label>
+                 <input name="issue_date" type="text" id="issue_date" class="form-control" placeholder="Enter issue_date" required>
+                 </div>
+
+
+                 <br>
+
+                 <div class="container text-center">
+                   <button class="btn btn-primary">
+                     Add Issue Book
+                   </button>
+                 </div>
+
+               </form>
+
+             </div>
+
+           </div>
+
+         </div>
+
+       </div>
+
+     </div>
+
+
+
+{% endblock content %}
